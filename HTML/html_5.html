@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title></title>
+</head>
+<body><h1 id='5html-标题'>5.HTML 标题</h1>
+<p>在 HTML 文档中，标题很重要。</p>
+<h2 id='html-标题'>HTML 标题</h2>
+<p>标题（Heading）是通过 <h1> - <h6> 标签进行定义的。</p>
+<p>&lt;h1&gt; 定义最大的标题。 <h6> 定义最小的标题。</p>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;这是标题 1&lt;/h1&gt;
+&lt;h2&gt;这是标题 2&lt;/h2&gt;
+&lt;h3&gt;这是标题 3&lt;/h3&gt;
+&lt;h4&gt;这是标题 4&lt;/h4&gt;
+&lt;h5&gt;这是标题 5&lt;/h5&gt;
+&lt;h6&gt;这是标题 6&lt;/h6&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718230109595.png" referrerpolicy="no-referrer"></p>
+<p><strong>注释:</strong> 浏览器会自动地在标题的前后添加空行。</p>
+<h2 id='标题很重要'>标题很重要</h2>
+<p>请确保将 HTML 标题 标签只用于标题。不要仅仅是为了生成<strong>粗体</strong>或<strong>大号</strong>的文本而使用标题。</p>
+<p>搜索引擎使用标题为您的网页的结构和内容编制索引。</p>
+<p>因为用户可以通过标题来快速浏览您的网页，所以用标题来呈现文档结构是很重要的。</p>
+<p>应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推。</p>
+<hr />
+<p>1到6号标题与1到6号字体逆序对应，比如1号字体对应6号标题，2号字体对应5号标题。</p>
+<pre><code class='language-html' lang='html'>&lt;h1&gt;这是1号标题&lt;/h1&gt;
+&lt;font size=&quot;6&quot;&gt;这是6号字体文本&lt;/font&gt;
+
+&lt;h2&gt;这是2号标题&lt;/h2&gt;
+&lt;font size=&quot;5&quot;&gt;这是5号字体文本&lt;/font&gt;
+
+&lt;h3&gt;这是3号标题&lt;/h3&gt;
+&lt;font size=&quot;4&quot;&gt;这是4号字体文本&lt;/font&gt;
+
+&lt;h4&gt;这是4号标题&lt;/h4&gt;
+&lt;font size=&quot;3&quot;&gt;这是3号字体文本&lt;/font&gt;
+
+&lt;h5&gt;这是5号标题&lt;/h5&gt;
+&lt;font size=&quot;2&quot;&gt;这是2号字体文本&lt;/font&gt;
+
+&lt;h6&gt;这是6号标题&lt;/h6&gt;
+&lt;font size=&quot;1&quot;&gt;这是1号字体文本&lt;/font&gt;
+</code></pre>
+<p>&nbsp;</p>
+<h2 id='html-水平线'>HTML 水平线</h2>
+<p>&lt;hr&gt; 标签在 HTML 页面中创建水平线。</p>
+<p>hr 元素可用于分隔内容。</p>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;p&gt;hr 标签定义水平线：&lt;/p&gt;
+	&lt;hr /&gt;
+	&lt;p&gt;这是段落。&lt;/p&gt;
+	&lt;hr /&gt;
+	&lt;p&gt;这是段落。&lt;/p&gt;
+	&lt;hr /&gt;
+	&lt;p&gt;这是段落。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718230342388.png" referrerpolicy="no-referrer"></p>
+<h2 id='html-注释'>HTML 注释</h2>
+<p>可以将注释插入 HTML 代码中，这样可以提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。</p>
+<p>注释写法如下:</p>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!--这是一个注释，注释在浏览器中不会显示--&gt;
+
+&lt;p&gt;这是一个段落&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718230556133.png" referrerpolicy="no-referrer"></p>
+<p><strong>注释:</strong> 开始括号之后（左边的括号）需要紧跟一个叹号 <strong>!</strong> (英文标点符号)，结束括号之前（右边的括号）不需要，合理地使用注释可以对未来的代码编辑工作产生帮助。</p>
+<h2 id='html-标签参考手册'>HTML 标签参考手册</h2>
+<figure><table>
+<thead>
+<tr><th><strong>标签</strong></th><th><strong>描述</strong></th></tr></thead>
+<tbody><tr><td><html></td><td>定义 HTML 文档</td></tr><tr><td><body></td><td>定义文档的主体</td></tr><tr><td><h1>-<h6></td><td>定义 HTML 标题</td></tr><tr><td><hr></td><td>定义水平线</td></tr><tr><td><!--   --></td><td>定义注释</td></tr></tbody>
+</table></figure>
+</body>
+</html>

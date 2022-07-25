@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title></title>
+</head>
+<body><h1 id='7html-文本格式化'>7.HTML 文本格式化</h1>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;/head&gt; 
+&lt;body&gt;
+
+&lt;b&gt;加粗文本&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+&lt;i&gt;斜体文本&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+&lt;code&gt;电脑自动输出&lt;/code&gt;&lt;br&gt;&lt;br&gt;
+这是 &lt;sub&gt; 下标&lt;/sub&gt; 和 &lt;sup&gt; 上标&lt;/sup&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718231901658.png" referrerpolicy="no-referrer"></p>
+<h2 id='html-格式化标签'>HTML 格式化标签</h2>
+<p>HTML 使用标签 <b>(&quot;bold&quot;) 与 <i>(&quot;italic&quot;) 对输出的文本进行格式, 如：<strong>粗体</strong> or <em>斜体</em></p>
+<p>这些HTML标签被称为格式化标签（请查看底部完整标签参考手册）。</p>
+<figure><table>
+<thead>
+<tr><th><img src="https://www.runoob.com/images/lamp.jpg" referrerpolicy="no-referrer" alt="Remark"></th><th><strong>通常标签 <strong> 替换加粗标签 <b> 来使用, <em> 替换 <i>标签使用。</strong>  然而，这些标签的含义是不同的：  <b> 与<i> 定义粗体或斜体文本。  <strong> 或者 <em>意味着你要呈现的文本是重要的，所以要突出显示。现今所有主要浏览器都能渲染各种效果的字体。不过，未来浏览器可能会支持更好的渲染效果。</th></tr></thead>
+<tbody></tbody>
+</table></figure>
+<h2 id='html-文本格式化标签'>HTML 文本格式化标签</h2>
+<figure><table>
+<thead>
+<tr><th>标签</th><th><strong>描述</strong></th></tr></thead>
+<tbody><tr><td><b></td><td>定义粗体文本</td></tr><tr><td><em></td><td>定义着重文字</td></tr><tr><td><i></td><td>定义斜体字</td></tr><tr><td><small></td><td>定义小号字</td></tr><tr><td><strong></td><td>定义加重语气</td></tr><tr><td><sub></td><td>定义下标字</td></tr><tr><td><sup></td><td>定义上标字</td></tr><tr><td><ins></td><td>定义插入字</td></tr><tr><td><del></td><td>定义删除字</td></tr></tbody>
+</table></figure>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;b&gt;这个文本是加粗的&lt;/b&gt;
+
+&lt;br /&gt;
+
+&lt;strong&gt;这个文本是加粗的&lt;/strong&gt;
+
+&lt;br /&gt;
+
+&lt;big&gt;这个文本字体放大&lt;/big&gt;
+
+&lt;br /&gt;
+
+&lt;em&gt;这个文本是斜体的&lt;/em&gt;
+
+&lt;br /&gt;
+
+&lt;i&gt;这个文本是斜体的&lt;/i&gt;
+
+&lt;br /&gt;
+
+&lt;small&gt;这个文本是缩小的&lt;/small&gt;
+
+&lt;br /&gt;
+
+这个文本包含
+&lt;sub&gt;下标&lt;/sub&gt;
+
+&lt;br /&gt;
+
+这个文本包含
+&lt;sup&gt;上标&lt;/sup&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718232541741.png" referrerpolicy="no-referrer"></p>
+<h2 id='html-计算机输出-标签'>HTML &quot;计算机输出&quot; 标签</h2>
+<figure><table>
+<thead>
+<tr><th><strong>标签</strong></th><th><strong>描述</strong></th></tr></thead>
+<tbody><tr><td><code></td><td>定义计算机代码</td></tr><tr><td><kbd></td><td>定义键盘码</td></tr><tr><td><samp></td><td>定义计算机代码样本</td></tr><tr><td><var></td><td>定义变量</td></tr><tr><td><pre></td><td>定义预格式文本</td></tr></tbody>
+</table></figure>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt; 
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;code&gt;计算机输出&lt;/code&gt;
+&lt;br /&gt;
+&lt;kbd&gt;键盘输入&lt;/kbd&gt;
+&lt;br /&gt;
+&lt;tt&gt;打字机文本&lt;/tt&gt;
+&lt;br /&gt;
+&lt;samp&gt;计算机代码样本&lt;/samp&gt;
+&lt;br /&gt;
+&lt;var&gt;计算机变量&lt;/var&gt;
+&lt;br /&gt;
+
+&lt;p&gt;
+&lt;b&gt;注释：&lt;/b&gt;这些标签常用于显示计算机/编程代码。
+&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718232810719.png" referrerpolicy="no-referrer"></p>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;pre&gt;
+此例演示如何使用 pre 标签
+对空行和    空格
+进行控制
+&lt;/pre&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718232920016.png" referrerpolicy="no-referrer"></p>
+<h2 id='html-引文-引用-及标签定义'>HTML 引文, 引用, 及标签定义</h2>
+<figure><table>
+<thead>
+<tr><th>标签</th><th>描述</th></tr></thead>
+<tbody><tr><td><abbr></td><td>定义缩写</td></tr><tr><td><address></td><td>定义地址</td></tr><tr><td><bdo></td><td>定义文字方向</td></tr><tr><td><blockquote></td><td>定义长的引用</td></tr><tr><td><q></td><td>定义短的引用语</td></tr><tr><td><cite></td><td>定义引用、引证</td></tr><tr><td><dfn></td><td>定义一个定义项目。</td></tr></tbody>
+</table></figure>
+<hr />
+<h3 id='地址address'>地址&lt;address&gt;</h3>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;address&gt;
+Written by &lt;a href=&quot;mailto:webmaster@example.com&quot;&gt;Jon Doe&lt;/a&gt;.&lt;br&gt; 
+Visit us at:&lt;br&gt;
+Example.com&lt;br&gt;
+Box 564, Disneyland&lt;br&gt;
+USA
+&lt;/address&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718233225168.png" referrerpolicy="no-referrer"></p>
+<hr />
+<h3 id='定义文字方向bdo'>定义文字方向&lt;bdo&gt;</h3>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;/head&gt; 
+&lt;body&gt;
+
+&lt;p&gt;该段落文字从左到右显示。&lt;/p&gt;  
+&lt;p&gt;&lt;bdo dir=&quot;rtl&quot;&gt;该段落文字从右到左显示。&lt;/bdo&gt;&lt;/p&gt;  
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718233352126.png" referrerpolicy="no-referrer"></p>
+<hr />
+<h3 id='缩写或首字母缩写abbr'>缩写或首字母缩写&lt;abbr&gt;</h3>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt; 
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;abbr title=&quot;etcetera&quot;&gt;etc.&lt;/abbr&gt;
+&lt;br /&gt;
+&lt;acronym title=&quot;World Wide Web&quot;&gt;WWW&lt;/acronym&gt;
+
+&lt;p&gt;在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。&lt;/p&gt;
+
+&lt;p&gt;仅对于 IE 5 中的 acronym 元素有效。&lt;/p&gt;
+
+&lt;p&gt;对于 Netscape 6.2 中的 abbr 和 acronym 元素都有效。&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718233552758.png" referrerpolicy="no-referrer"></p>
+<hr />
+<h3 id='长短不一的引用语q'>长短不一的引用语&lt;q&gt;</h3>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;WWF&#39;s goal is to: 
+&lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;
+We hope they succeed.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718233828761.png" referrerpolicy="no-referrer"></p>
+<hr />
+<h3 id='删除文本和插入文本del'>删除文本和插入文本&lt;del&gt;</h3>
+<pre><code class='language-html' lang='html'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset=&quot;utf-8&quot;&gt; 
+&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; &lt;ins&gt;red&lt;/ins&gt;!&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="C:\Users\陈小贵儿\AppData\Roaming\Typora\typora-user-images\image-20220718234000991.png" referrerpolicy="no-referrer"></p>
+</body>
+</html>
