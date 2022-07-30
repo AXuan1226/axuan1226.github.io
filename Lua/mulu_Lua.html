@@ -6,16 +6,10 @@
         <meta charset="utf-8" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>光头强晓宇</title>
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica&amp;display=swap">
-        <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-        <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
         <link rel="icon" href="/ico/gtq.ico" type="image/x-icon">
         <link rel="shortcut icon" href="/ico/gtq.ico" type="image/x-icon">
     
-<link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
@@ -213,474 +207,451 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-inline-math-container mjx-container { zoom: 0.95; }
 
 
-@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
-@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
-
 :root {
-	--control-text-color: #777;
+  --accent-color: #696969; /* nice */
+  --primary-colour: #306797; /* <> */
+  --background-color: white;
+  --border-color: #dbdbdb;
+  --code-bg-color: #f8f8f8; 
+  --font-color: #1f1f1f;
+  --codemirror-color: var(--font-color);
+  --header-color: #000000;
+  --link-color: #2077b2;
+  --control-text-color: #667176;
+  --side-bar-bg-color: #fafafa;
+  --hr-color: var(--primary-colour);
+  --body-font: "Nunito", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --heading-font: "Roboto Slab", serif;
+  --border-radius: 2px;
+  --document-horizontal-margin: 80px;
+  --document-padding-x: 19ch;
+  --font-size: 16px;
+  --h1-fontsize: 2.7rem;
+  --h2-fontsize: 2.2rem;
+  --h3-fontsize: 1.7rem;
+  --h4-fontsize: 1.4rem;
+  --h5-fontsize: 1.2rem;
+  --h6-fontsize: 1.1rem;
+  --line-height: 1.4;
+  --main-content-margin: 0 auto;
+  --main-content-max-width: 100ch;
+  --monospace-font-size: 15px;
+  --monospace-font: "FiraCode", "Inconsolata", "Consolas", "Menlo", "Liberation Mono", Courier, monospace;
+  --monospace-line-height: 1.4;
+  --monospace: var(--monospace-font); /* Fixes source code mode */
+  --nav-width: 200px;
+  --vertical-padding: 40px;
+}
+
+/* Narrow layout styles */
+@media (max-width: 640px) {
+  :root {
+    --document-padding-x: 4ch;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  background-color: var(--background-color);
+}
+
+html,
+body {
+  color: var(--font-color);
+  font-family: var(--body-font);
+  line-height: var(--line-height);
+}
+
+#write {
+	/* size of writing area: */
+  padding-left: var(--document-padding-x);
+  padding-right: var(--document-padding-x);
+  max-width: var(--main-content-max-width);
+  box-sizing: border-box;
 }
 
 /**
- * forked from pixyll.com
- * MIT license
+ * ---------------------
+ * Block Elements
  */
 
-h1,
-.h1,
-.f1 {
-	font-size: 2rem;
-	line-height: 2.5rem;
-}
-h2,
-.h2,
-.f2 {
-	font-size: 1.5rem;
-	line-height: 2rem;
-}
-h3,
-.h3,
-.f3 {
-	font-size: 1.25rem;
-	line-height: 1.5rem;
-}
-p,
-.p,
-.f4,
-h4,
-h5,
-h6,
-dl,
-ol,
-ul,
-pre[cid],
-div[cid],
-#typora-source {
-	font-size: 1.125rem;
-	line-height: 1.5rem;
+/* yaml */
+pre.md-meta-block {
+  background-color: var(--background-color);
+  padding-bottom: .5rem;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--border-color);
+  font-family: var(--monospace-font);
 }
 
-h4 {
-	font-size: 1.13rem;
-}
-/*
- Pixyll
- A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
- Best served with BASSCSS (http://jxnblk.github.io/basscss)
- Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
-
-*/
-
-body {
-	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", 'Segoe UI Emoji', Serif;
-	line-height: 1.5rem;
-	font-weight: 400;
+/* headings */
+/* <> */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--header-color);
 }
 
-#write {
-	max-width: 914px;
-	color: #333;
+/* <> */
+h1 {
+  padding: 5% 4% 4% 4%;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: var(--h1-fontsize);
+  border: 4px solid var(--primary-colour);
 }
 
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1100px;
-	}
+h1:not(:first-child) {
+  margin-top: 3rem;
 }
 
-@media only screen and (min-width: 1700px) {
-	#write {
-		max-width: 1200px;
-	}
+/* <> */
+h2 {
+  content: '';
+  text-align: center;
+  font-size: var(--h2-fontsize);
+  margin: 1.5rem 10%;
+}
+h2:after {
+  content: '';
+	/* height: 1px; */
+	width: 70%;
+	display: block;
+	margin: .2em auto 0;
+	border-bottom: 2px solid var(--primary-colour);
 }
 
-img {
-	width: auto;
-	max-width: 100%;
+/* <> */
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5em;
+  font-size: var(--h3-fontsize);
 }
-body {
-	font-size: 1.5rem;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
-.ty-table-edit {
-	background: #ededed;
+/* <> */
+h3 span{
+  padding: 0 1em;
+  border-left: 2px solid var(--primary-colour);
+  border-right: 2px solid var(--primary-colour);
 }
 
+h4{
+  color: var(--header-color);
+  margin-top: 1rem;
+  margin-bottom: 0.4em;
+  font-size: var(--h4-fontsize );
+}
+/* <> */
+h4 span{
+  padding: 1px 0 0.1em 0;
+  border-bottom: 2px dashed var(--primary-colour);
+}
+
+
+h5{
+  color: var(--header-color);  
+  margin-top: 1rem;
+  margin-bottom: 0.2em;
+  font-size: var(--h5-fontsize);
+}
+
+h6{
+  font-style: oblique;
+  color: var(--header-color);  
+  margin-top: 1rem;
+  margin-bottom: 0.2em;
+  font-size: var(--h6-fontsize);
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+/* table */
 table {
-	width: 100%;
-	font-size: 1.125rem;
-}
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td,
-table > tfoot > tr > th,
-table > tfoot > tr > td {
-	padding: 12px;
-	line-height: 1.2;
-	vertical-align: top;
-	border-top: 1px solid #333;
-}
-table > thead > tr > th {
-	vertical-align: bottom;
-	border-bottom: 2px solid #333;
-}
-table > caption + thead > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > th,
-table > thead:first-child > tr:first-child > td {
-	border-top: 0;
-}
-table > tbody + tbody {
-	border-top: 2px solid #333;
-}
-p {
-	font-weight: 300;
-	line-height: 1.5;
-}
-abbr {
-	border-bottom: 1px black dotted;
-	cursor: help;
-}
-pre,
-code {
-	font-family: Menlo, Monaco, "Courier New", monospace;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-code,
-.md-fences  {
-	color: #7a7a7a;
+table tr:nth-child(2n),
+thead {
+    background-color: var(--side-bar-bg-color);
 }
 
-.md-fences {
-	padding: 1.125em;
-	margin-bottom: 0.88em;
-	font-size: 1rem;
-	border: 1px solid #7a7a7a;
-	padding-bottom: 0.5rem;
-	padding-top: 0.5rem;
+td,
+th {
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 1px;
+  padding: .35rem .7rem
 }
 
-blockquote {
-	padding: 1.33em;
-	font-style: italic;
-	border-left: 5px solid #7a7a7a;
-	color: #555;
-}
-blockquote em {
-	color: #000;
-}
-blockquote footer {
-	font-size: .85rem;
-	font-style: normal;
-	background-color: #fff;
-	color: #7a7a7a;
-	border-color: transparent;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: bold;
-	line-height: 1.2;
-	margin: 1em 0 0.5em;
-}
-@media screen and (min-width: 48em) {
-	.h1,
-	h1 {
-		font-size: 3.250rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.298rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.625rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.3rem;
-	}
-	#write>h4.md-focus:before,
-	#write>h5.md-focus:before,
-	#write>h6.md-focus:before{
-		top: 1px;
-	}
-	.p,
-	p,
-	li {
-		font-size: 1.25rem;
-		line-height: 1.8;
-	}
-	table {
-		font-size: 1.25rem;
-	}
-}
-@media (max-width: 48em) {
-	blockquote {
-		margin-left: 1rem;
-		margin-right: 0;
-		padding: 0.5em;
-	}
-	.h1,
-	h1 {
-		font-size: 2.827rem;
-	}
-	.h2,
-	h2 {
-		font-size: 1.999rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.413rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.3rem;
-	}
-}
-@media screen and (min-width: 64em) {
-	.h1,
-	h1 {
-		font-size: 4.498rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.29rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.9rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.591rem;
-	}
-	#write>h4.md-focus:before{
-		top:4px;
-	}
-}
-a {
-	color: #463F5C;
-	text-decoration: underline;
+li p {
+  margin: 0;
 }
 
-#write {
-	padding-top: 2rem;
+/* .task-list {
+  padding-left: 0;
 }
 
-#write pre.md-meta-block {
-	min-height: 35px;
-	padding: 0.5em 1em;
-	white-space: pre;
-	border: 0px;
+.task-list-item {
+  padding-left: 1.5em;
+  margin-bottom: 0rem;
+} */
 
-	border-left: 30px #f8f8f8 solid;
-	border-right: 30px #f8f8f8 solid;
-	width: 100vw;
-	max-width: calc(100% + 60px);
+/* Task list Checkbox styling from https://github.com/h16nning/typora-gitbook-theme/blob/main/src/gitbook-teal.css */
 
-	margin-left: -30px;
-	margin-bottom: 2em;
-	margin-top: -2010px;
-	padding-top: 2000px;
-	padding-bottom: 10px;
-	line-height: 1.5em;
-	color: #7a7a7a;
-	background-color: #fafafa;
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: 300;
-	clear: both;
-	padding-left: 0;
-	font-size:1.125rem;
-}
-.md-image>.md-meta {
-	color: #463F5C
-}
-.footnotes {
-	font-size:1.1rem;
-}
-.md-tag {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-}
-.code-tooltip {
-	background: white;
-}
-.code-tooltip-content {
-	font-size: 1.1rem;
+.md-task-list-item > input:before,
+input[type="checkbox"]:before {
+  border-radius: 0.2rem;
+  margin-top: -0.08rem;
+  margin-left: -0.1rem;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--font-color);
+  background-color: var(--background-color);
+  content: " ";
+  display: block;
+  transition-duration: 0.3s;
+  transition-property: background-color;
 }
 
-.task-list{
-	padding-left: 0;
-}
-
-.md-task-list-item {
-	padding-left:34px;
-}
-
-.md-task-list-item > input{
-	width: 1.25rem;
-	height: 1.25rem;
-	display: block;
-	-webkit-appearance: initial;
-	top: -0.2rem;
-	margin-left: -1.6em;
-	margin-top: calc(1rem - 7px);
-	border: none;
-}
-
-.md-task-list-item > input:focus{
-	outline: none;
-	box-shadow: none;
-}
-
-.md-task-list-item > input:before{
-	border: 1px solid #555;
-	border-radius: 1.5rem;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: #fff;
-	content: ' ';
-	transition: background-color 200ms ease-in-out;
-	display: block;
+.md-task-list-item:hover > input:before,
+input[type="checkbox"]:hover:before {
+  background-color: var(--primary-colour);
 }
 
 .md-task-list-item > input:checked:before,
-.md-task-list-item > input[checked]:before{
-	background: #333;
-	border-width: 2px;
-	display:inline-block;
-	transition: background-color 200ms ease-in-out;
+.md-task-list-item > input[checked]:before,
+input[type="checkbox"]:checked:before {
+  background-color: var(--primary-colour);
+}
+
+.md-task-list-item:hover > input:checked:before,
+.md-task-list-item:hover > input[checked]:before,
+input[type="checkbox"]:hover:checked:before {
+  background-color: var(--primary-colour);
+}
+
+.md-task-list-item > input:after,
+.md-task-list-item > input:after,
+input[type="checkbox"]:after {
+  transform: rotate(-45deg);
+  position: absolute;
+  border: 2px solid white;
+  border-top: 0;
+  border-right: 0;
+  top: 0.16rem;
+  left: 0.1rem;
+  width: 0.6rem;
+  height: 0.375rem;
+  content: " ";
+  opacity: 0;
+  transition-duration: 0.3s;
+  transition-property: opacity;
 }
 
 .md-task-list-item > input:checked:after,
-.md-task-list-item > input[checked]:after {
-	opacity: 1;
+.md-task-list-item > input[checked]:after,
+input[type="checkbox"]:checked:after {
+  opacity: 1;
 }
 
-.md-task-list-item > input:after {
-	opacity: 1;
-	-webkit-transition: opacity 0.05s ease-in-out;
-	-moz-transition: opacity 0.05s ease-in-out;
-	transition: opacity 0.05s ease-in-out;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	position: absolute;
-	top: 0.4375rem;
-	left: 0.28125rem;
-	width: 0.9375rem;
-	height: 0.5rem;
-	border: 3px solid #fff;
-	border-top: 0;
-	border-right: 0;
-	content: ' ';
-	opacity: 0;
+
+
+blockquote {
+  font-style: italic; /* <> */
+  margin: 1rem 0;
+  padding-left: 2ch;
+  margin-left: .5ch;
+  position: relative;
+  overflow: visible;   /* <> */
+  border-left: 4px solid var(--primary-colour);
+  color: var(--accent-color);
 }
 
-.md-tag {
-	color:inherit;
+/* horizontal line */
+hr {
+  border: none;
+  border-bottom: 2px solid var(--hr-color);
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
 }
 
-.md-toc:focus .md-toc-content{
-	margin-top: 19px;
+/* list markers */
+ol > li::marker, ul > li::marker {
+	color: var(--primary-colour);
+	font-weight: bold;
 }
 
-#typora-sidebar {
-	font-size:1rem !important;
+p {
+  margin: 0.1em 0;
 }
 
-.html-for-mac #typora-sidebar {
-	background-color:white;
+/**
+ * Code Fences
+ * see http:/*support.typora.io/Code-Block-Styles
+ */
+
+.cm-s-inner .CodeMirror-gutters {
+   background: var(--code-bg-color);
 }
 
-.outline-content li, .outline-content ul {
-	font-size:1rem !important;
+.code-tooltip {
+  box-shadow: none;
+  border-radius: var(--border-radius);
+  background-color: var(--code-bg-color);
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: 1px;
 }
 
-.outline-title {
-	line-height: inherit;
-	margin-top: 10px;
+.code-tooltip input {
+  outline: none;
+  width: 20ch;
 }
 
-.outline-expander {
-	width: 18px;
+.md-fences .code-tooltip {
+  bottom: -1.8rem;
+  padding: none;
 }
 
-.outline-expander:before {
- 	content: "+";
-	font-family: inherit;
-	color: rgb(108, 108, 108); 
-  font-size: 1.5rem;
- 	top: -0.1rem;
+.md-fences.md-focus .cm-s-inner {
+  /* Remove bottom right border radius when tooltip is shown */
+  border-bottom-right-radius: 0;
 }
 
-.outline-expander:hover:before {
-	content: "+";
+/* code tooltip autocomplete list */
+
+.autoComplt-hint {
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0.125rem 0.375rem !important;
+  color: var(--text-color) !important;
+  line-height: var(--line-height) !important;
+  height: 1.4rem !important;
 }
 
-.outline-item-open>.outline-item>.outline-expander:before{
-	content: "-";
+.autoComplt-hint-selected {
+  background-color: var(--link-color) !important;
+  color: var(--background-color) !important;
 }
 
-/** source code mode */
-#typora-source {
-	font-family: Courier, monospace;
-    color: #6A6A6A;
+/* basic styles */
+
+.md-fences,
+code,
+tt {
+  border: 1px solid var(--border-color);
+  background-color: var(--code-bg-color);
+  font-family: var(--monospace-font);
+  font-size: var(--monospace-font-size);
+  border-radius: .25rem;
+  padding: 0 .125rem;
+  line-height: var(--monospace-line-height);
 }
 
-.os-windows #typora-source {
-	font-family: inherit;
+.md-fences {
+  margin-bottom: 18px;
+  margin-top: 15px;
+  padding: 0.2em 1em;
+  padding-top: 8px;
+  padding-bottom: 6px;
 }
 
-.cm-s-typora-default .cm-header, 
-.cm-s-typora-default .cm-property,
-.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
-	color: #428bca;
+a {
+  color:  var(--link-color);
 }
 
-.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
-	color: #777777;
+
+/**
+ * Control UI (optional)
+ */
+
+.outline-item:hover {
+  color: var(--header-color);
 }
 
-.md-diagram-panel {
-	margin-top: 24px;
-	margin-left: -1.2em;
+#write div.md-toc-tooltip {
+	background-color: var(--background-color);
 }
 
-.md-mathjax-midline {
-	background: #fafafa;
-}
+/* CodeMirror Theme: a modified version of ir_black - https://github.com/FarhadG/code-mirror-themes/blob/master/themes/ir_black.css */
 
-.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
-    bottom: -3.4em;
+.cm-s-inner {
+	font-size: 1em;
+	line-height: 1.5em;
+	font-family: var(--monospace-font);
+	letter-spacing: 0.3px;
+	word-spacing: 1px;
+	background: var(--code-bg-color) !important;
+	color: var(--codemirror-color);
 }
+.cm-s-inner .CodeMirror-lines {
+	padding: 0px 0;
+}
+.cm-s-inner .CodeMirror-gutters {
+	background-color: var(--code-bg-color) !important;
+	border: none;
+}
+.cm-s-inner div.CodeMirror-cursor {	border-left: 3px solid var(--codemirror-color) !important;}
+.cm-s-inner .CodeMirror-selected {	background: #afafaf !important;}
+.cm-s-inner .cm-comment {	color: #575757 !important;}
+.cm-s-inner .cm-keyword {	color: #1675ce !important;}
+.cm-s-inner .cm-string {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-number {	color: #5b1d68 !important;}
+.cm-s-inner .cm-property {	color: #5b1d68 !important;}
+.cm-s-inner .cm-atom {	color: #5b1d68 !important;}
+.cm-s-inner .cm-operator {	color: #173d61 !important;}
+.cm-s-inner .CodeMirror-linenumber {	color: #7C7C7C !important;}
+/* Not in original Theme... */
+.cm-s-inner .cm-def {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-punctuation {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-variable {	color: #125d5f !important;}
+.cm-s-inner .cm-variable-2 {	color: #125d5f !important;}
+.cm-s-inner .cm-variable-3 {	color: #125d5f !important;}
+.cm-s-inner .cm-meta {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-string-2 {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-qualifier {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-builtin {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-quote {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-bracket {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-tag {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-attribute {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-hr {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-link {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-plus {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-minus {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-error {	color: var(--codemirror-color) !important;}
+.cm-s-inner .cm-invalidchar {	color: var(--codemirror-color) !important;}
 
-.dropdown-menu .divider {
-	border-color: #e5e5e5;
-}
+/* End CodeMirror Theme */
 
 
 </style>
 </head>
 <body class='typora-export os-windows typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
-<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1lua-教程">1_Lua 教程</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#11设计目的">1.1设计目的</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#12第一个-lua-程序">1.2第一个 Lua 程序</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#13lua-应用场景">1.3Lua 应用场景</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#14lua-特性">1.4Lua 特性</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2lua-环境安装">2_Lua 环境安装</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#21linux-系统上安装">2.1Linux 系统上安装</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#22mac-os-x-系统上安装">2.2Mac OS X 系统上安装</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#23window-系统上安装-lua">2.3Window 系统上安装 Lua</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3lua-基本语法">3_Lua 基本语法</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#31第一个-lua-程序">3.1.第一个 Lua 程序</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#311-交互式编程">3.1.1 交互式编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#312-脚本式编程">3.1.2 脚本式编程</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#32注释">3.2.注释</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#321-单行注释">3.2.1 单行注释</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#322-多行注释">3.2.2 多行注释</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#33标示符">3.3.标示符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#34关键词">3.4.关键词</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#35全局变量">3.5.全局变量</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4lua-数据类型">4_Lua 数据类型</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#41nil空）">4.1.nil（空）</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#411-nil-作比较时应该加上双引号">4.1.1 nil 作比较时应该加上双引号 </a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#42boolean布尔）">4.2.boolean（布尔）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#43number数字）">4.3.number（数字）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#44string字符串）">4.4.string（字符串）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#45table表）">4.5.table（表）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#46function函数）">4.6.function（函数）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#47thread线程）">4.7.thread（线程）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#48userdata自定义类型）">4.8.userdata（自定义类型）</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5lua-变量">5_Lua 变量</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#51赋值语句">5.1赋值语句</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#52索引">5.2索引</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6lua-循环">6_Lua 循环</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#61无限循环">6.1无限循环</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7lua-流程控制">7_Lua 流程控制</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#71lua-流程控制">7.1Lua 流程控制</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#8lua-函数">8_Lua 函数</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#81函数定义">8.1函数定义</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#82多返回值">8.2多返回值</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#83可变参数">8.3可变参数</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#9lua-运算符">9_Lua 运算符</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#91算术运算符">9.1算术运算符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#92关系运算符">9.2关系运算符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#93逻辑运算符">9.3逻辑运算符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#94其他运算符">9.4其他运算符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#95运算符优先级">9.5运算符优先级</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#10lua-字符串">10_Lua 字符串</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#101字符串操作">10.1字符串操作</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1012-字符串截取">10.1.2 字符串截取</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1012-字符串大小写转换">10.1.2 字符串大小写转换</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1013-字符串查找与反转">10.1.3 字符串查找与反转</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1014-字符串格式化">10.1.4 字符串格式化</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1015-字符与整数相互转换">10.1.5 字符与整数相互转换</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1016其他常用函数">10.1.6其他常用函数</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1017匹配模式">10.1.7匹配模式</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#11lua-数组">11_Lua 数组</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#111一维数组">11.1一维数组</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#112多维数组">11.2多维数组</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#12lua-迭代器">12_Lua 迭代器</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#121泛型-for-迭代器">12.1泛型 for 迭代器</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#122无状态的迭代器">12.2无状态的迭代器</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#123多状态的迭代器">12.3多状态的迭代器</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#13lua-table表">13_Lua table(表)</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#131table表的构造">13.1table(表)的构造</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#132table-操作">13.2Table 操作</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1321--table-连接">13.2.1  Table 连接</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1322-插入和移除">13.2.2 插入和移除</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1323-table-排序">13.2.3 Table 排序</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1324-table-最大值">13.2.4 Table 最大值</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#14lua-模块与包">14_Lua 模块与包</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#require-函数">require 函数</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#加载机制">加载机制</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#c-包">C 包</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#15lua-元表metatable">15_Lua 元表(Metatable)</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#151-index-元方法">15.1 __index 元方法</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#152-为表添加操作符">15.2 为表添加操作符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#153-call-元方法">15.3 __call 元方法</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#154-tostring-元方法">15.4 __tostring 元方法</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#16lua-协同程序coroutine">16_Lua 协同程序(coroutine)</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#161-什么是协同coroutine">16.1 什么是协同(coroutine)？</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#162-线程和协同程序区别">16.2 线程和协同程序区别</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#163-基本语法">16.3 基本语法</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1631-以下实例演示了以上各个方法的用法">16.3.1 以下实例演示了以上各个方法的用法：</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#164-生产者-消费者问题httpsaxuan1226githubiolua16lua-协同程序coroutinehtml">16.4 生产者-消费者问题</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='1lua-教程'><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>1_Lua 教程</span></a></h1><h2 id='11设计目的'><span>1.1</span><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>设计目的</span></a></h2><h2 id='12第一个-lua-程序'><span>1.2</span><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>第一个 Lua 程序</span></a></h2><h2 id='13lua-应用场景'><span>1.3</span><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>Lua 应用场景</span></a></h2><h2 id='14lua-特性'><span>1.4</span><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>Lua 特性</span></a></h2><h1 id='2lua-环境安装'><a href='https://axuan1226.github.io/Lua/2_Lua 环境安装.html'><span>2_Lua 环境安装</span></a></h1><h2 id='21linux-系统上安装'><span>2.1</span><a href='https://axuan1226.github.io/Lua/2_Lua 环境安装.html'><span>Linux 系统上安装</span></a></h2><h2 id='22mac-os-x-系统上安装'><span>2.2</span><a href='https://axuan1226.github.io/Lua/2_Lua 环境安装.html'><span>Mac OS X 系统上安装</span></a></h2><h2 id='23window-系统上安装-lua'><span>2.3</span><a href='https://axuan1226.github.io/Lua/2_Lua 环境安装.html'><span>Window 系统上安装 Lua</span></a></h2><h1 id='3lua-基本语法'><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>3_Lua 基本语法</span></a></h1><h2 id='31第一个-lua-程序'><span>3.1.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>第一个 Lua 程序</span></a></h2><h3 id='311-交互式编程'><span>3.1.1 </span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>交互式编程</span></a></h3><h3 id='312-脚本式编程'><span>3.1.2 </span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>脚本式编程</span></a></h3><h2 id='32注释'><span>3.2.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>注释</span></a></h2><h4 id='321-单行注释'><span>3.2.1 </span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>单行注释</span></a></h4><h4 id='322-多行注释'><span>3.2.2 </span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>多行注释</span></a></h4><h2 id='33标示符'><span>3.3.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>标示符</span></a></h2><h2 id='34关键词'><span>3.4.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>关键词</span></a></h2><h2 id='35全局变量'><span>3.5.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>全局变量</span></a></h2><h1 id='4lua-数据类型'><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>4_Lua 数据类型</span></a></h1><h2 id='41nil空）'><span>4.1.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>nil（空）</span></a></h2><h3 id='411-nil-作比较时应该加上双引号'><span>4.1.1 </span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>nil 作比较时应该加上双引号</span></a><span> </span></h3><h2 id='42boolean布尔）'><span>4.2.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>boolean（布尔）</span></a></h2><h2 id='43number数字）'><span>4.3.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>number（数字）</span></a></h2><h2 id='44string字符串）'><span>4.4.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>string（字符串）</span></a></h2><h2 id='45table表）'><span>4.5.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>table（表）</span></a></h2><h2 id='46function函数）'><span>4.6.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>function（函数）</span></a></h2><h2 id='47thread线程）'><span>4.7.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>thread（线程）</span></a></h2><h2 id='48userdata自定义类型）'><span>4.8.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>userdata（自定义类型）</span></a></h2><h1 id='5lua-变量'><a href='https://axuan1226.github.io/Lua/5_Lua 变量.html'><span>5_Lua 变量</span></a></h1><h2 id='51赋值语句'><span>5.1</span><a href='https://axuan1226.github.io/Lua/5_Lua 变量.html'><span>赋值语句</span></a></h2><h2 id='52索引'><span>5.2</span><a href='https://axuan1226.github.io/Lua/5_Lua 变量.html'><span>索引</span></a></h2><h1 id='6lua-循环'><a href='https://axuan1226.github.io/Lua/6_Lua 循环.html'><span>6_Lua 循环</span></a></h1><h2 id='61无限循环'><span>6.1</span><a href='https://axuan1226.github.io/Lua/6_Lua 循环.html'><span>无限循环</span></a></h2><h1 id='7lua-流程控制'><a href='https://axuan1226.github.io/Lua/7_Lua 流程控制.html'><span>7_Lua 流程控制</span></a></h1><h2 id='71lua-流程控制'><span>7.1</span><a href='https://axuan1226.github.io/Lua/7_Lua 流程控制.html'><span>Lua 流程控制</span></a></h2><h1 id='8lua-函数'><a href='https://axuan1226.github.io/Lua/8_Lua 函数.html'><span>8_Lua 函数</span></a></h1><h2 id='81函数定义'><span>8.1</span><a href='https://axuan1226.github.io/Lua/8_Lua 函数.html'><span>函数定义</span></a></h2><h2 id='82多返回值'><span>8.2</span><a href='https://axuan1226.github.io/Lua/8_Lua 函数.html'><span>多返回值</span></a></h2><h2 id='83可变参数'><span>8.3</span><a href='https://axuan1226.github.io/Lua/8_Lua 函数.html'><span>可变参数</span></a></h2><h1 id='9lua-运算符'><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>9_Lua 运算符</span></a></h1><h2 id='91算术运算符'><span>9.1</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>算术运算符</span></a></h2><h2 id='92关系运算符'><span>9.2</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>关系运算符</span></a></h2><h2 id='93逻辑运算符'><span>9.3</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>逻辑运算符</span></a></h2><h2 id='94其他运算符'><span>9.4</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>其他运算符</span></a></h2><h2 id='95运算符优先级'><span>9.5</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>运算符优先级</span></a></h2><h1 id='10lua-字符串'><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>10_Lua 字符串</span></a></h1><h2 id='101字符串操作'><span>10.1</span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串操作</span></a></h2><h3 id='1012-字符串截取'><span>10.1.2 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串截取</span></a></h3><h3 id='1012-字符串大小写转换'><span>10.1.2 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串大小写转换</span></a></h3><h3 id='1013-字符串查找与反转'><span>10.1.3 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串查找与反转</span></a></h3><h3 id='1014-字符串格式化'><span>10.1.4 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串格式化</span></a></h3><h3 id='1015-字符与整数相互转换'><span>10.1.5 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符与整数相互转换</span></a></h3><h3 id='1016其他常用函数'><span>10.1.6</span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>其他常用函数</span></a></h3><h3 id='1017匹配模式'><span>10.1.7</span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>匹配模式</span></a></h3><h1 id='11lua-数组'><a href='https://axuan1226.github.io/Lua/11_Lua 数组.html'><span>11_Lua 数组</span></a></h1><h2 id='111一维数组'><a href='https://axuan1226.github.io/Lua/11_Lua 数组.html'><span>11.1一维数组</span></a></h2><h2 id='112多维数组'><a href='https://axuan1226.github.io/Lua/11_Lua 数组.html'><span>11.2多维数组</span></a></h2><p>&nbsp;</p><h1 id='12lua-迭代器'><a href='https://axuan1226.github.io/Lua/12_Lua 迭代器.html'><span>12_Lua 迭代器</span></a></h1><h2 id='121泛型-for-迭代器'><a href='https://axuan1226.github.io/Lua/12_Lua 迭代器.html'><span>12.1泛型 for 迭代器</span></a></h2><h2 id='122无状态的迭代器'><a href='https://axuan1226.github.io/Lua/12_Lua 迭代器.html'><span>12.2无状态的迭代器</span></a></h2><h2 id='123多状态的迭代器'><a href='https://axuan1226.github.io/Lua/12_Lua 迭代器.html'><span>12.3多状态的迭代器</span></a></h2><h1 id='13lua-table表'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13_Lua table(表)</span></a></h1><h2 id='131table表的构造'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.1table(表)的构造</span></a></h2><h2 id='132table-操作'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2Table 操作</span></a></h2><h3 id='1321--table-连接'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2.1  Table 连接</span></a></h3><h3 id='1322-插入和移除'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2.2 插入和移除</span></a></h3><h3 id='1323-table-排序'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2.3 Table 排序</span></a></h3><h3 id='1324-table-最大值'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2.4 Table 最大值</span></a></h3><h1 id='14lua-模块与包'><a href='https://axuan1226.github.io/Lua/14_Lua 模块与包.html'><span>14_Lua 模块与包</span></a></h1><h2 id='require-函数'><a href='https://axuan1226.github.io/Lua/14_Lua 模块与包.html'><span>require 函数</span></a></h2><h2 id='加载机制'><a href='https://axuan1226.github.io/Lua/14_Lua 模块与包.html'><span>加载机制</span></a></h2><h2 id='c-包'><a href='https://axuan1226.github.io/Lua/14_Lua 模块与包.html'><span>C 包</span></a></h2><h1 id='15lua-元表metatable'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15_Lua 元表(Metatable)</span></a></h1><h2 id='151-index-元方法'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15.1 __index 元方法</span></a></h2><h2 id='152-为表添加操作符'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15.2 为表添加操作符</span></a></h2><h2 id='153-call-元方法'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15.3 __call 元方法</span></a></h2><h2 id='154-tostring-元方法'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15.4 __tostring 元方法</span></a></h2><h1 id='16lua-协同程序coroutine'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16_Lua 协同程序(coroutine)</span></a></h1><h2 id='161-什么是协同coroutine'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.1 什么是协同(coroutine)？</span></a></h2><h2 id='162-线程和协同程序区别'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.2 线程和协同程序区别</span></a></h2><h2 id='163-基本语法'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.3 基本语法</span></a></h2><h3 id='1631-以下实例演示了以上各个方法的用法'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.3.1 以下实例演示了以上各个方法的用法：</span></a></h3><h2 id='164-生产者-消费者问题httpsaxuan1226githubiolua16lua-协同程序coroutinehtml'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.4 生产者-消费者问题</span></a></h2></div></div>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1lua-教程">1_Lua 教程</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#11设计目的">1.1设计目的</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#12第一个-lua-程序">1.2第一个 Lua 程序</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#13lua-应用场景">1.3Lua 应用场景</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#14lua-特性">1.4Lua 特性</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2lua-环境安装">2_Lua 环境安装</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#21linux-系统上安装">2.1Linux 系统上安装</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#22mac-os-x-系统上安装">2.2Mac OS X 系统上安装</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#23window-系统上安装-lua">2.3Window 系统上安装 Lua</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3lua-基本语法">3_Lua 基本语法</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#31第一个-lua-程序">3.1.第一个 Lua 程序</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#311-交互式编程">3.1.1 交互式编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#312-脚本式编程">3.1.2 脚本式编程</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#32注释">3.2.注释</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#321-单行注释">3.2.1 单行注释</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#322-多行注释">3.2.2 多行注释</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#33标示符">3.3.标示符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#34关键词">3.4.关键词</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#35全局变量">3.5.全局变量</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4lua-数据类型">4_Lua 数据类型</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#41nil空）">4.1.nil（空）</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#411-nil-作比较时应该加上双引号">4.1.1 nil 作比较时应该加上双引号 </a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#42boolean布尔）">4.2.boolean（布尔）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#43number数字）">4.3.number（数字）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#44string字符串）">4.4.string（字符串）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#45table表）">4.5.table（表）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#46function函数）">4.6.function（函数）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#47thread线程）">4.7.thread（线程）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#48userdata自定义类型）">4.8.userdata（自定义类型）</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5lua-变量">5_Lua 变量</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#51赋值语句">5.1赋值语句</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#52索引">5.2索引</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6lua-循环">6_Lua 循环</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#61无限循环">6.1无限循环</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7lua-流程控制">7_Lua 流程控制</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#71lua-流程控制">7.1Lua 流程控制</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#8lua-函数">8_Lua 函数</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#81函数定义">8.1函数定义</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#82多返回值">8.2多返回值</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#83可变参数">8.3可变参数</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#9lua-运算符">9_Lua 运算符</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#91算术运算符">9.1算术运算符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#92关系运算符">9.2关系运算符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#93逻辑运算符">9.3逻辑运算符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#94其他运算符">9.4其他运算符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#95运算符优先级">9.5运算符优先级</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#10lua-字符串">10_Lua 字符串</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#101字符串操作">10.1字符串操作</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1012-字符串截取">10.1.2 字符串截取</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1012-字符串大小写转换">10.1.2 字符串大小写转换</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1013-字符串查找与反转">10.1.3 字符串查找与反转</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1014-字符串格式化">10.1.4 字符串格式化</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1015-字符与整数相互转换">10.1.5 字符与整数相互转换</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1016其他常用函数">10.1.6其他常用函数</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1017匹配模式">10.1.7匹配模式</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#11lua-数组">11_Lua 数组</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#111一维数组">11.1一维数组</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#112多维数组">11.2多维数组</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#12lua-迭代器">12_Lua 迭代器</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#121泛型-for-迭代器">12.1泛型 for 迭代器</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#122无状态的迭代器">12.2无状态的迭代器</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#123多状态的迭代器">12.3多状态的迭代器</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#13lua-table表">13_Lua table(表)</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#131table表的构造">13.1table(表)的构造</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#132table-操作">13.2Table 操作</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1321--table-连接">13.2.1  Table 连接</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1322-插入和移除">13.2.2 插入和移除</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1323-table-排序">13.2.3 Table 排序</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1324-table-最大值">13.2.4 Table 最大值</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#14lua-模块与包">14_Lua 模块与包</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#require-函数">require 函数</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#加载机制">加载机制</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#c-包">C 包</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#15lua-元表metatable">15_Lua 元表(Metatable)</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#151-index-元方法">15.1 __index 元方法</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#152-为表添加操作符">15.2 为表添加操作符</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#153-call-元方法">15.3 __call 元方法</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#154-tostring-元方法">15.4 __tostring 元方法</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#16lua-协同程序coroutine">16_Lua 协同程序(coroutine)</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#161-什么是协同coroutine">16.1 什么是协同(coroutine)？</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#162-线程和协同程序区别">16.2 线程和协同程序区别</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#163-基本语法">16.3 基本语法</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1631-以下实例演示了以上各个方法的用法">16.3.1 以下实例演示了以上各个方法的用法：</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#164-生产者-消费者问题">16.4 生产者-消费者问题</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#17lua-文件-io">17_Lua 文件 I/O</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#171-简单模式">17.1 简单模式</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#172-完全模式">17.2 完全模式</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#18lua-错误处理">18_Lua 错误处理</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#181-语法错误">18.1 语法错误</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#182-运行错误">18.2 运行错误</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#183-错误处理">18.3 错误处理</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1831-error函数"><span>	</span>18.3.1 error函数</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#184-pcall-和-xpcalldebug">18.4 pcall 和 xpcall、debug</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#19lua-调试debug">19_Lua 调试(Debug)</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#191-另一个实例">19.1 另一个实例</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#192-调试类型">19.2 调试类型</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#20lua-垃圾回收">20_Lua 垃圾回收</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#201-垃圾回收器函数">20.1 垃圾回收器函数</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#21lua-面向对象">21_Lua 面向对象</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#211-面向对象特征">21.1 面向对象特征</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#212-lua-中面向对象">21.2 Lua 中面向对象</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2121-一个简单实例"><span>	</span>21.2.1 一个简单实例</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2122-创建对象"><span>	</span>21.2.2 创建对象</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2123-访问属性"><span>	</span>21.2.3 访问属性</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2124-访问成员函数"><span>	</span>21.2.4 访问成员函数</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2125-完整实例"><span>	</span>21.2.5 完整实例</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#213-lua-继承">21.3 Lua 继承</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2131-完整实例"><span>	</span>21.3.1 完整实例</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#214-函数重写">21.4 函数重写</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#22lua-数据库访问httpsaxuan1226githubiolua22lua-数据库访问html">22_Lua 数据库访问</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#23lua53参考手册">23_Lua5.3参考手册</a></div><ul class="outline-children"></ul></li></div></div><div id='write'  class=''><h1 id='1lua-教程'><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>1_Lua 教程</span></a></h1><h2 id='11设计目的'><span>1.1</span><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>设计目的</span></a></h2><h2 id='12第一个-lua-程序'><span>1.2</span><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>第一个 Lua 程序</span></a></h2><h2 id='13lua-应用场景'><span>1.3</span><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>Lua 应用场景</span></a></h2><h2 id='14lua-特性'><span>1.4</span><a href='https://axuan1226.github.io/Lua/1_Lua 教程.html'><span>Lua 特性</span></a></h2><h1 id='2lua-环境安装'><a href='https://axuan1226.github.io/Lua/2_Lua 环境安装.html'><span>2_Lua 环境安装</span></a></h1><h2 id='21linux-系统上安装'><span>2.1</span><a href='https://axuan1226.github.io/Lua/2_Lua 环境安装.html'><span>Linux 系统上安装</span></a></h2><h2 id='22mac-os-x-系统上安装'><span>2.2</span><a href='https://axuan1226.github.io/Lua/2_Lua 环境安装.html'><span>Mac OS X 系统上安装</span></a></h2><h2 id='23window-系统上安装-lua'><span>2.3</span><a href='https://axuan1226.github.io/Lua/2_Lua 环境安装.html'><span>Window 系统上安装 Lua</span></a></h2><h1 id='3lua-基本语法'><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>3_Lua 基本语法</span></a></h1><h2 id='31第一个-lua-程序'><span>3.1.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>第一个 Lua 程序</span></a></h2><h3 id='311-交互式编程'><span>3.1.1 </span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>交互式编程</span></a></h3><h3 id='312-脚本式编程'><span>3.1.2 </span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>脚本式编程</span></a></h3><h2 id='32注释'><span>3.2.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>注释</span></a></h2><h4 id='321-单行注释'><span>3.2.1 </span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>单行注释</span></a></h4><h4 id='322-多行注释'><span>3.2.2 </span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>多行注释</span></a></h4><h2 id='33标示符'><span>3.3.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>标示符</span></a></h2><h2 id='34关键词'><span>3.4.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>关键词</span></a></h2><h2 id='35全局变量'><span>3.5.</span><a href='https://axuan1226.github.io/Lua/3_Lua 基本语法.html'><span>全局变量</span></a></h2><h1 id='4lua-数据类型'><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>4_Lua 数据类型</span></a></h1><h2 id='41nil空）'><span>4.1.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>nil（空）</span></a></h2><h3 id='411-nil-作比较时应该加上双引号'><span>4.1.1 </span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>nil 作比较时应该加上双引号</span></a><span> </span></h3><h2 id='42boolean布尔）'><span>4.2.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>boolean（布尔）</span></a></h2><h2 id='43number数字）'><span>4.3.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>number（数字）</span></a></h2><h2 id='44string字符串）'><span>4.4.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>string（字符串）</span></a></h2><h2 id='45table表）'><span>4.5.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>table（表）</span></a></h2><h2 id='46function函数）'><span>4.6.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>function（函数）</span></a></h2><h2 id='47thread线程）'><span>4.7.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>thread（线程）</span></a></h2><h2 id='48userdata自定义类型）'><span>4.8.</span><a href='https://axuan1226.github.io/Lua/4_Lua 数据类型.html'><span>userdata（自定义类型）</span></a></h2><h1 id='5lua-变量'><a href='https://axuan1226.github.io/Lua/5_Lua 变量.html'><span>5_Lua 变量</span></a></h1><h2 id='51赋值语句'><span>5.1</span><a href='https://axuan1226.github.io/Lua/5_Lua 变量.html'><span>赋值语句</span></a></h2><h2 id='52索引'><span>5.2</span><a href='https://axuan1226.github.io/Lua/5_Lua 变量.html'><span>索引</span></a></h2><h1 id='6lua-循环'><a href='https://axuan1226.github.io/Lua/6_Lua 循环.html'><span>6_Lua 循环</span></a></h1><h2 id='61无限循环'><span>6.1</span><a href='https://axuan1226.github.io/Lua/6_Lua 循环.html'><span>无限循环</span></a></h2><h1 id='7lua-流程控制'><a href='https://axuan1226.github.io/Lua/7_Lua 流程控制.html'><span>7_Lua 流程控制</span></a></h1><h2 id='71lua-流程控制'><span>7.1</span><a href='https://axuan1226.github.io/Lua/7_Lua 流程控制.html'><span>Lua 流程控制</span></a></h2><h1 id='8lua-函数'><a href='https://axuan1226.github.io/Lua/8_Lua 函数.html'><span>8_Lua 函数</span></a></h1><h2 id='81函数定义'><span>8.1</span><a href='https://axuan1226.github.io/Lua/8_Lua 函数.html'><span>函数定义</span></a></h2><h2 id='82多返回值'><span>8.2</span><a href='https://axuan1226.github.io/Lua/8_Lua 函数.html'><span>多返回值</span></a></h2><h2 id='83可变参数'><span>8.3</span><a href='https://axuan1226.github.io/Lua/8_Lua 函数.html'><span>可变参数</span></a></h2><h1 id='9lua-运算符'><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>9_Lua 运算符</span></a></h1><h2 id='91算术运算符'><span>9.1</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>算术运算符</span></a></h2><h2 id='92关系运算符'><span>9.2</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>关系运算符</span></a></h2><h2 id='93逻辑运算符'><span>9.3</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>逻辑运算符</span></a></h2><h2 id='94其他运算符'><span>9.4</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>其他运算符</span></a></h2><h2 id='95运算符优先级'><span>9.5</span><a href='https://axuan1226.github.io/Lua/9_Lua 运算符.html'><span>运算符优先级</span></a></h2><h1 id='10lua-字符串'><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>10_Lua 字符串</span></a></h1><h2 id='101字符串操作'><span>10.1</span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串操作</span></a></h2><h3 id='1012-字符串截取'><span>10.1.2 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串截取</span></a></h3><h3 id='1012-字符串大小写转换'><span>10.1.2 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串大小写转换</span></a></h3><h3 id='1013-字符串查找与反转'><span>10.1.3 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串查找与反转</span></a></h3><h3 id='1014-字符串格式化'><span>10.1.4 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符串格式化</span></a></h3><h3 id='1015-字符与整数相互转换'><span>10.1.5 </span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>字符与整数相互转换</span></a></h3><h3 id='1016其他常用函数'><span>10.1.6</span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>其他常用函数</span></a></h3><h3 id='1017匹配模式'><span>10.1.7</span><a href='https://axuan1226.github.io/Lua/10_Lua 字符串.html'><span>匹配模式</span></a></h3><h1 id='11lua-数组'><a href='https://axuan1226.github.io/Lua/11_Lua 数组.html'><span>11_Lua 数组</span></a></h1><h2 id='111一维数组'><a href='https://axuan1226.github.io/Lua/11_Lua 数组.html'><span>11.1一维数组</span></a></h2><h2 id='112多维数组'><a href='https://axuan1226.github.io/Lua/11_Lua 数组.html'><span>11.2多维数组</span></a></h2><p>&nbsp;</p><h1 id='12lua-迭代器'><a href='https://axuan1226.github.io/Lua/12_Lua 迭代器.html'><span>12_Lua 迭代器</span></a></h1><h2 id='121泛型-for-迭代器'><a href='https://axuan1226.github.io/Lua/12_Lua 迭代器.html'><span>12.1泛型 for 迭代器</span></a></h2><h2 id='122无状态的迭代器'><a href='https://axuan1226.github.io/Lua/12_Lua 迭代器.html'><span>12.2无状态的迭代器</span></a></h2><h2 id='123多状态的迭代器'><a href='https://axuan1226.github.io/Lua/12_Lua 迭代器.html'><span>12.3多状态的迭代器</span></a></h2><h1 id='13lua-table表'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13_Lua table(表)</span></a></h1><h2 id='131table表的构造'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.1table(表)的构造</span></a></h2><h2 id='132table-操作'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2Table 操作</span></a></h2><h3 id='1321--table-连接'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2.1  Table 连接</span></a></h3><h3 id='1322-插入和移除'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2.2 插入和移除</span></a></h3><h3 id='1323-table-排序'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2.3 Table 排序</span></a></h3><h3 id='1324-table-最大值'><a href='https://axuan1226.github.io/Lua/13_Lua table(表).html'><span>13.2.4 Table 最大值</span></a></h3><h1 id='14lua-模块与包'><a href='https://axuan1226.github.io/Lua/14_Lua 模块与包.html'><span>14_Lua 模块与包</span></a></h1><h2 id='require-函数'><a href='https://axuan1226.github.io/Lua/14_Lua 模块与包.html'><span>require 函数</span></a></h2><h2 id='加载机制'><a href='https://axuan1226.github.io/Lua/14_Lua 模块与包.html'><span>加载机制</span></a></h2><h2 id='c-包'><a href='https://axuan1226.github.io/Lua/14_Lua 模块与包.html'><span>C 包</span></a></h2><h1 id='15lua-元表metatable'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15_Lua 元表(Metatable)</span></a></h1><h2 id='151-index-元方法'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15.1 __index 元方法</span></a></h2><h2 id='152-为表添加操作符'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15.2 为表添加操作符</span></a></h2><h2 id='153-call-元方法'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15.3 __call 元方法</span></a></h2><h2 id='154-tostring-元方法'><a href='https://axuan1226.github.io/Lua/15_Lua 元表(Metatable).html'><span>15.4 __tostring 元方法</span></a></h2><h1 id='16lua-协同程序coroutine'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16_Lua 协同程序(coroutine)</span></a></h1><h2 id='161-什么是协同coroutine'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.1 什么是协同(coroutine)？</span></a></h2><h2 id='162-线程和协同程序区别'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.2 线程和协同程序区别</span></a></h2><h2 id='163-基本语法'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.3 基本语法</span></a></h2><h3 id='1631-以下实例演示了以上各个方法的用法'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.3.1 以下实例演示了以上各个方法的用法：</span></a></h3><h2 id='164-生产者-消费者问题'><a href='https://axuan1226.github.io/Lua/16_Lua 协同程序(coroutine).html'><span>16.4 生产者-消费者问题</span></a></h2><h1 id='17lua-文件-io'><a href='https://axuan1226.github.io/Lua/17_Lua 文件 I/O.html'><span>17_Lua 文件 I/O</span></a></h1><h2 id='171-简单模式'><a href='https://axuan1226.github.io/Lua/17_Lua 文件 I/O.html'><span>17.1 简单模式</span></a></h2><h2 id='172-完全模式'><a href='https://axuan1226.github.io/Lua/17_Lua 文件 I/O.html'><span>17.2 完全模式</span></a></h2><h1 id='18lua-错误处理'><a href='https://axuan1226.github.io/Lua/18_Lua 错误处理.html'><span>18_Lua 错误处理</span></a></h1><h2 id='181-语法错误'><a href='https://axuan1226.github.io/Lua/18_Lua 错误处理.html'><span>18.1 语法错误</span></a></h2><h2 id='182-运行错误'><a href='https://axuan1226.github.io/Lua/18_Lua 错误处理.html'><span>18.2 运行错误</span></a></h2><h2 id='183-错误处理'><a href='https://axuan1226.github.io/Lua/18_Lua 错误处理.html'><span>18.3 错误处理</span></a></h2><h3 id='1831-error函数'><span>	</span><a href='https://axuan1226.github.io/Lua/18_Lua 错误处理.html'><span>18.3.1 error函数</span></a></h3><h2 id='184-pcall-和-xpcalldebug'><a href='https://axuan1226.github.io/Lua/18_Lua 错误处理.html'><span>18.4 pcall 和 xpcall、debug</span></a></h2><h1 id='19lua-调试debug'><a href='https://axuan1226.github.io/Lua/19_Lua 调试(Debug).html'><span>19_Lua 调试(Debug)</span></a></h1><h2 id='191-另一个实例'><a href='https://axuan1226.github.io/Lua/19_Lua 调试(Debug).html'><span>19.1 另一个实例</span></a></h2><h2 id='192-调试类型'><a href='https://axuan1226.github.io/Lua/19_Lua 调试(Debug).html'><span>19.2 调试类型</span></a></h2><h1 id='20lua-垃圾回收'><a href='https://axuan1226.github.io/Lua/20_Lua 垃圾回收.html'><span>20_Lua 垃圾回收</span></a></h1><h2 id='201-垃圾回收器函数'><a href='https://axuan1226.github.io/Lua/20_Lua 垃圾回收.html'><span>20.1 垃圾回收器函数</span></a></h2><h1 id='21lua-面向对象'><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21_Lua 面向对象</span></a></h1><h2 id='211-面向对象特征'><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.1 面向对象特征</span></a></h2><h2 id='212-lua-中面向对象'><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.2 Lua 中面向对象</span></a></h2><h3 id='2121-一个简单实例'><span>	</span><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.2.1 一个简单实例</span></a></h3><h3 id='2122-创建对象'><span>	</span><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.2.2 创建对象</span></a></h3><h3 id='2123-访问属性'><span>	</span><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.2.3 访问属性</span></a></h3><h3 id='2124-访问成员函数'><span>	</span><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.2.4 访问成员函数</span></a></h3><h3 id='2125-完整实例'><span>	</span><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.2.5 完整实例</span></a></h3><h2 id='213-lua-继承'><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.3 Lua 继承</span></a></h2><h3 id='2131-完整实例'><span>	</span><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.3.1 完整实例</span></a></h3><h2 id='214-函数重写'><a href='https://axuan1226.github.io/Lua/21_Lua 面向对象.html'><span>21.4 函数重写</span></a></h2><h1 id='22lua-数据库访问httpsaxuan1226githubiolua22lua-数据库访问html'><a href='https://axuan1226.github.io/Lua/22_Lua 数据库访问.html'><span>22_Lua 数据库访问</span></a></h1><h1 id='23lua53参考手册'><a href='https://axuan1226.github.io/Lua/23_Lua5.3参考手册.html'><span>23_Lua5.3参考手册</span></a></h1></div></div>
 
 <script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
 </html>
