@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>颜色选择器</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #color-circle {
+            width: 200px;
+            height: 200px;
+            background: #FFD89C;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        #color-value {
+            margin-top: 10px;
+            user-select: all; /* 让文本可选中 */
+            cursor: pointer; /* 鼠标指针改为手型 */
+        }
+    </style>
+</head>
+<body>
+    <h1>颜色选择器</h1>
+    <input type="text" id="color-input" placeholder="输入颜色值，如 #FFD89C">
+    <input type="color" id="color-picker">
+    <div id="color-circle"></div>
+    <div id="color-value"></div>
+
+    <script>
+        const colorInput = document.getElementById("color-input");
+        const colorPicker = document.getElementById("color-picker");
+        const colorCircle = document.getElementById("color-circle");
+        const colorValue = document.getElementById("color-value");
+
+        // 监听颜色输入框的输入事件
+        colorInput.addEventListener("input", () => {
+            const color = colorInput.value;
+            colorCircle.style.backgroundColor = color;
+            colorValue.textContent = color;
+        });
+
+        // 监听调色板的改变事件
+        colorPicker.addEventListener("input", () => {
+            const color = colorPicker.value;
+            colorCircle.style.backgroundColor = color;
+            colorValue.textContent = color;
+        });
+
+        // 鼠标右键单击时复制颜色值
+        colorValue.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            const color = colorValue.textContent;
+            const textArea = document.createElement("textarea");
+            textArea.value = color;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+        });
+    </script>
+</body>
+</html>
