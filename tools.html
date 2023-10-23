@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>工具选择</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+        .tool {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 20px; /* 圆角矩形样式 */
+        }
+        .tool:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>工具选择</h1>
+    <div class="grid-container">
+        <div class="tool" id="color-selector">颜色选择器</div>
+        <div class="tool">待更新</div>
+        <div class="tool">待更新</div>
+        <div class="tool">待更新</div>
+        <div class="tool">待更新</div>
+        <div class="tool">待更新</div>
+        <div class="tool">待更新</div>
+        <div class="tool">待更新</div>
+        <div class="tool">待更新</div>
+    </div>
+
+    <script>
+        // 颜色选择器工具的点击事件
+        const colorSelector = document.getElementById("color-selector");
+        colorSelector.addEventListener("click", () => {
+            window.open("tools/colorSelect.html", "_blank");
+        });
+
+        // 在这里添加更多工具的点击事件
+    </script>
+</body>
+</html>
